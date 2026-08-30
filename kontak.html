@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak - Desa Semparuk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo_pemda.png" alt="Logo Desa Semparuk" class="logo-img"/>
+      <span>Desa Semparuk</span>
+    </div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="potensi.html">Potensi</a>
+      <a href="layanan.html">Layanan</a>
+      <a href="kontak.html" class="active">Kontak</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <section class="page-header">
+    <h1>Kontak Kami</h1>
+    <p>Hubungi kami untuk informasi lebih lanjut</p>
+  </section>
+
+  <section class="content">
+    <div class="kontak-wrapper">
+      <div class="kontak-info">
+        <h2>Informasi Kontak</h2>
+        <div class="info-item">
+          <h3>📍 Alamat</h3>
+          <p>Desa Semparuk<br/>Kecamatan Semparuk<br/>Kabupaten Sambas<br/>Kalimantan Barat 79461</p>
+        </div>
+        <div class="info-item">
+          <h3>📞 Telepon</h3>
+          <p>(0562) XXXXXX</p>
+        </div>
+        <div class="info-item">
+          <h3>📧 Email</h3>
+          <p>email@desasemparuk.id</p>
+        </div>
+        <div class="info-item">
+          <h3>🕐 Jam Operasional</h3>
+          <p>Senin - Kamis: 08.00 - 16.00 WIB<br/>Jumat: 08.00 - 11.00 WIB<br/>Sabtu - Minggu: Tutup</p>
+        </div>
+      </div>
+
+      <div class="kontak-form">
+        <h2>Kirim Pesan</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required/>
+          </div>
+          <div class="form-group">
+            <label for="subjek">Subjek</label>
+            <input type="text" id="subjek" name="subjek" required/>
+          </div>
+          <div class="form-group">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="map-section">
+      <h2>Lokasi Desa</h2>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18974.86491471189!2d109.10151152522246!3d1.1787715364190103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e49df1788b9505%3A0x7a98b74405d9af21!2sKec.%20Semparuk%2C%20Kabupaten%20Sambas%2C%20Kalimantan%20Barat!5e0!3m2!1sid!2sid!4v1787822150719!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Desa Semparuk</h3>
+        <p>Kecamatan Semparuk, Kabupaten Sambas<br/>Kalimantan Barat, Indonesia</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Desa Semparuk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
