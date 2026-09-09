@@ -67,25 +67,45 @@ document.querySelectorAll('.stat-card, .potensi-card, .berita-card, .fasilitas-c
 });
 
 // ===== CONTACT FORM HANDLER =====
-const contactForm = document.getElementById('contactForm');
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbwnkNPdeK9Uk1TCxHgWlM3lK_Z_KW1qTVj1SHRWDu-4HYz8afQY8817jsZNxsD7uNAjfw/exec";
+
+const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    
-    // Ambil data form
+
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
-    
-    // Validasi sederhana
+
     if (!data.nama || !data.email || !data.subjek || !data.pesan) {
-      alert('Mohon lengkapi semua field!');
+      alert("Mohon lengkapi semua field!");
       return;
     }
-    
-    // Simulasi pengiriman
-    alert('Terima kasih! Pesan Anda telah kami terima. Kami akan menghubungi Anda segera.');
-    contactForm.reset();
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify({
+          nama: data.nama,
+          email: data.email,
+          subjek: data.subjek,
+          pesan: data.pesan
+        })
+      });
+
+      alert("Terima kasih! Pesan berhasil dikirim.");
+      contactForm.reset();
+
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Terjadi kesalahan saat mengirim pesan.");
+    }
   });
 }
 
