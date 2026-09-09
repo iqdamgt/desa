@@ -68,8 +68,7 @@ document.querySelectorAll('.stat-card, .potensi-card, .berita-card, .fasilitas-c
 
 // ===== CONTACT FORM HANDLER =====
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwnkNPdeK9Uk1TCxHgWlM3lK_Z_KW1qTVj1SHRWDu-4HYz8afQY8817jsZNxsD7uNAjfw/exec";
-
+  "https://script.google.com/macros/s/AKfycbzfuVMHjF4K0tmq4a5KqleBctRlaATgNYLr0XBmQtWxo0MIqcs-ZQDacm2R55KEkgqhgw/exec";
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
